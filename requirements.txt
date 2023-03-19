@@ -1,0 +1,14 @@
+category_encoders==2.6.0
+fastapi==0.93.0
+feature_engine==1.5.2
+ipython==8.11.0
+matplotlib==3.5.1
+numpy==1.22.2
+pandas==1.4.1
+pydantic==1.10.2
+scikit_learn==1.1.2
+scikit_plot==0.3.7
+seaborn==0.11.2
+shap==0.41.0
+xgboost==1.6.1
+uvicorn==0.18.3
