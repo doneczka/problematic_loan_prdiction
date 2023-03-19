@@ -3,7 +3,7 @@
 ## **GOAL** – prediction of which person might struggle with loan repayment
 -	Find personal traits of people who might not pay on time their debts
 -	Fine-tune the model to get the best results
-- model deployment on GCP
+- Model deployment on GCP
 
 ## **Methods and techniques:**
 -	EDA to check what kind of data I deal with – internal/external data; current applications for credits, previous credit history; borrower characteristics.
@@ -12,6 +12,9 @@
 -	RandomizedSearchCV for hyperparameter tuning 
 -	Boruta feature selection technique
 -	Feature importance with shap library
+-	Docker for contenerization
+-	FastAPI and GCP for deployment
+-	Locust for testing
 
 ## **Conclusions:**
 
@@ -36,8 +39,16 @@ Overall, my investigation suggests that my solution could improve the current mo
 However, further experimentation and refinement of the model may be necessary to achieve even better results. 
 
 Deployment capabilities: 
->● Testing with basic python script that sends request to ML model’s API endpoint:
->Response time in ms: Median: 118.0 95th percentile: 140.1 Max: 21902 
->● Testing with Locust: 100 users/swarn rate: 
->Median: 480 95th percentile: 5100 Max: 5218 
->*current failures: 21.4
+> ● Testing with basic python script that sends request to ML model’s API endpoint:
+> 
+> Response time in ms: Median: 118.0 
+> 
+> 95th percentile: 140.1 Max: 21902 
+> 
+> ● Testing with Locust: 100 users/swarn rate-2: 
+>
+>Median: 480 
+>
+>95th percentile: 5100 Max: 5218 
+>
+>current failures: 21.4
