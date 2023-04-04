@@ -52,7 +52,7 @@ Problem loans generally make up a small proportion of a bank's total credit outs
 
 ## **4.0 Top Data Insights 📈**
 
-Datasets available, provided by Home Credit Group and their connections:
+Home Credit Group, a global financial services provider, collects and analyzes data from both external and internal sources to make informed credit decisions. External data is obtained from Credit Bureaus, while internal data includes information on previous loan applications, payments, credit card balances, and POS cash balances. By connecting these datasets, Home Credit Group gains a comprehensive view of an individual's creditworthiness and is better equipped to offer loans to those who may not have access to traditional banking services. The diagram of connections between these datasets provides a visual representation of how Home Credit Group leverages data to make informed lending decisions.
 
 ![Diagram](diagram.png)
 
@@ -97,10 +97,10 @@ Top 20 most important features with highest SHAP values:
 
 ## **6.0 Business considerations 👩‍💼**
 
-According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution. 
+According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution.
 
 Additionally, by alerting predictions with pred_proba of class 0 ranging from 0.5 to 0.65 based on my model, we could potentially minimize loss by another 5 million. 
-
+This approach allows to identify loans that are at a higher risk of default but not severe enough to be flagged as bad loans. By identifying these loans early on, lenders can take proactive measures to mitigate the risk of default, resulting in even greater savings.
 
 ## **7.0 Final remarks ✅**
 
