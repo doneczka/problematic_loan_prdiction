@@ -67,12 +67,35 @@ In terms of features, for which distribution od the data differs significantly b
 ![External_sources](ext_sources_distr.png)
 
 
-## **5.0 Machine Learning models - results**
+## **5.0 Best Machine Learning model - results**
+
+Best performing model, after hyperparameter tuning was: **XGBOOST**, with parametrs:
+
+>(
+>objective="binary:logistic",
+>    scale_pos_weight=11.4,>
+>    random_state=0,
+>    **{
+>        "subsample": 0.9,
+>        "reg_lambda": 10,
+>        "reg_alpha": 0.001,
+>        "n_estimators": 50,
+>        "max_depth": 5,
+>        "learning_rate": 0.2,
+>        "colsample_bytree": 1.0,
+>    }
+>)
 
 
+![Results](results_xgboost.png)
 
 
-## **5.0 Conclusions ✅**
+Top 20 most important features with highest SHAP values:
+
+![Shap](shap_values.png)
+
+
+## **6.0 Conclusions ✅**
 
 COST_CALCULATION - According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution. 
 
