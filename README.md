@@ -67,7 +67,7 @@ In terms of features, for which distribution od the data differs significantly b
 ![External_sources](ext_sources_distr.png)
 
 
-## **5.0 Best Machine Learning model - results**
+## **5.0 Best Machine Learning model - results 🏆**
 
 Best performing model, after hyperparameter tuning was: **XGBOOST**, with parametrs:
 
@@ -95,23 +95,14 @@ Top 20 most important features with highest SHAP values:
 ![Shap](shap_values.png)
 
 
-## **6.0 Conclusions ✅**
+## **6.0 Business considerations 👩‍💼**
 
-COST_CALCULATION - According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution. 
+According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution. 
 
 Additionally, by alerting predictions with pred_proba of class 0 ranging from 0.5 to 0.65 based on my model, we could potentially minimize loss by another 5 million. 
 
-Regarding my investigation of the Home Credit Group's datasets, there were a total of eight datasets, including the application train/test dataset, two credit bureau datasets, and four previous borrower application datasets.
 
- For my risk assessment strategy, I used the main dataset, application train, which included the 'TARGET' column indicating which applications were considered risky. After experimenting with various models and feature engineering techniques, I found that the XGBClassifier model had the best performance with an AUC score of 0.752 on the test set. 
-
-Subsenquentially, I added features from the credit bureau datasets and created a 'TRUST INDICATOR' column to determine which applicants were more likely to pay on time or not. However, adding these columns did not increase the ROC-AUC score. 
-
-Next, I selected only accepted applications from the previous_application and installments_payments datasets and added a 'PAYMENT_RATIO' column, which proved to be a significant predictor, increasing the ROC-AUC score to 0.758. 
-
-Then, I added features from the credit_card_balance and pos_cash_balance datasets, but neither improved the results. 
-
-Finally, I performed Boruta feature selection and chose 15 most important features for my final model, including three engineered features: 'PAYMENT_RATIO', 'TOTAL_PAYMENT_AGREEMENT', and 'TOTAL_NB_POS_CASH'. The final ROC-AUC score was 0.752. 
+## **7.0 Final remarks ✅**
 
 Overall, my investigation suggests that my solution could improve the current model's performance, resulting in significant cost savings. 
 
