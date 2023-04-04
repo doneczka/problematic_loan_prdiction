@@ -52,9 +52,27 @@ Problem loans generally make up a small proportion of a bank's total credit outs
 
 ## **4.0 Top Data Insights 📈**
 
+Datasets available, provided by Home Credit Group and their connections:
+
+![Diagram](diagram.png)
+
+People who applied for a loan, mostly applied for cash loans. Most of them did not own a car, but they did own a realty. 2/3 of the borrowers were women, living in block of flats. Most of people finished secondary school or have higher education.
+
+![Demografic profile of borrowers](demografic_data_1.png)
+![Demografic profile of borrowers_2](demografic_data.png)
+
+In terms of features, for which distribution od the data differs significantly between people who had payment problems and who did not, values from external sources 1-3 seems to have the highest impact.
 
 
-## **5.0 Conclusions:**
+![External_sources](ext_sources_distr.png)
+
+
+## **5.0 Machine Learning models - results**
+
+
+
+
+## **5.0 Conclusions ✅**
 
 COST_CALCULATION - According to my simulation, if we replace the current model, which predicts bad loans with a 60% true positive rate, with my solution that predicts bad loans with a 68.7% true positive rate, we could minimize the loss from bad predictions by about 19%, from 12.4 million with the current solution to 10.1 million with my solution. 
 
